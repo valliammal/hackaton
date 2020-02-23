@@ -57,6 +57,51 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
+	<pluginRepositories>
 
+		<pluginRepository>
+			<id>nexus-osc</id>
+			<name>osc private nexus</name>
+			<url>http://maven.oschina.net/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+
+		<pluginRepository>
+			<id>sonatype-repository</id>
+			<url>http://repository.sonatype.org/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+
+	</pluginRepositories>
+	<build>
+		<plugins>
+			  <plugin>
+      				<groupId>org.springframework.boot</groupId>
+      				<artifactId>spring-boot-maven-plugin</artifactId>
+      				<version>2.2.4.RELEASE</version>
+      				<configuration>
+        				<mainClass>${start-class}</mainClass>
+        				<layout>ZIP</layout>
+      				</configuration>
+      				<executions>
+        			<execution>
+          			<goals>
+            				<goal>repackage</goal>
+          			</goals>
+        			</execution>
+      				</executions>
+    			</plugin>
+		</plugins>
+	</build>
 	<artifactId>AcctProduct</artifactId>
 </project>
