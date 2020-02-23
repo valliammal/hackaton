@@ -58,7 +58,6 @@
 		</dependency>
 	</dependencies>
 	<pluginRepositories>
-
 		<pluginRepository>
 			<id>nexus-osc</id>
 			<name>osc private nexus</name>
@@ -70,7 +69,14 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
-
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-paultegelaar-maven</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/paultegelaar/maven</url>
+                </pluginRepository>
 		<pluginRepository>
 			<id>sonatype-repository</id>
 			<url>http://repository.sonatype.org/content/groups/public</url>
@@ -81,7 +87,6 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
-
 	</pluginRepositories>
 	<build>
 		<plugins>
