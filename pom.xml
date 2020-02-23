@@ -57,45 +57,44 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-	<pluginRepositories>
-                <pluginRepository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>bintray-paultegelaar-maven</id>
-                    <name>bintray-plugins</name>
-                    <url>https://dl.bintray.com/paultegelaar/maven</url>
-                </pluginRepository>
-		<pluginRepository>
-			<id>sonatype-repository</id>
-			<url>http://repository.sonatype.org/content/groups/public</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-	<build>
-		<plugins>
-			  <plugin>
-      				<groupId>org.springframework.boot</groupId>
-      				<artifactId>spring-boot-maven-plugin</artifactId>
-      				<version>2.2.4.RELEASE</version>
-      				<configuration>
-        				<mainClass>${start-class}</mainClass>
-        				<layout>ZIP</layout>
-      				</configuration>
-      				<executions>
-        			<execution>
-          			<goals>
-            				<goal>repackage</goal>
-          			</goals>
-        			</execution>
-      				</executions>
-    			</plugin>
-		</plugins>
-	</build>
-	<artifactId>AcctProduct</artifactId>
+ <build>
+    <plugins>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration> <!-- Compile java 7 compatible bytecode -->
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>  <!-- Create sources.jar -->
+            <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+      </plugin>
+            
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+      </plugin>
+    </plugins>	
+<artifactId>AcctProduct</artifactId>
 </project>
