@@ -58,17 +58,6 @@
 		</dependency>
 	</dependencies>
 	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus-osc</id>
-			<name>osc private nexus</name>
-			<url>http://maven.oschina.net/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
                 <pluginRepository>
                     <snapshots>
                         <enabled>false</enabled>
