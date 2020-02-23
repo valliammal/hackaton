@@ -6,7 +6,6 @@
   <packaging>jar</packaging>
   <version>1.1</version>
   <name>AcctProduct</name>
-  <url>https://jitpack.io/#jitpack/maven-simple/0.1</url>
 
   <dependencies>
     <dependency>
