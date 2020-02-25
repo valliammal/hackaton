@@ -76,6 +76,19 @@
                     <executable>C:\jdk1.8.0_231\bin\javac</executable>
                 </configuration>
             </plugin>
+	    <plugin>
+    		<groupId>org.codehaus.mojo</groupId>
+    		<artifactId>exec-maven-plugin</artifactId>
+    		<version>1.3.2</version>
+    		<configuration>
+        		<executable>java</executable>
+        		<arguments>
+            		<argument>-cp</argument>
+            		<argument>C:/Users/Muthusankaranarayana/.jenkins/jobs/BuildBackend/workspace/target/AcctProduct-2.1.2.RELEASE.jar</argument>
+            		<argument>org.example.Main</argument>
+        		</arguments>
+    		</configuration>
+	   </plugin>	
         </plugins>
     	</build>
 	<artifactId>AcctProduct</artifactId>
