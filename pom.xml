@@ -85,8 +85,8 @@
         		<arguments>
             		<argument>-cp</argument>
             		<argument>C:/Users/Muthusankaranarayana/.jenkins/jobs/BuildBackend/workspace/target/AcctProduct-2.1.2.RELEASE.jar</argument>
-            		<argument>com.hcl.hackaton.Application</argument>
-        		</arguments>
+            		<mainClass>com.hcl.hackaton.Application</mainClass>
+			</arguments>
     		</configuration>
 	   </plugin>	
         </plugins>
