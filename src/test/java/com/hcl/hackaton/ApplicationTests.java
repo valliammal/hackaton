@@ -39,11 +39,11 @@ public class ApplicationTests {
 		HttpHeaders headers = new HttpHeaders();
 		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
 
-		//ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/Accts",
-		//		HttpMethod.GET, entity, String.class);
+		/*ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/Accts",
+				HttpMethod.GET, entity, String.class);
 		System.out.println("Acct Details ");
 		System.out.println(response.toString());
-		Assert.assertNotNull(response.getBody());
+		Assert.assertNotNull(response.getBody());*/
 	}
 
 	@Test
