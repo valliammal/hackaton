@@ -89,7 +89,7 @@
         		<executable>java</executable>
         		<arguments>
             		<argument>-cp</argument>
-            		<argument>C:/Users/Muthusankaranarayana/.jenkins/jobs/BuildBackend/workspace/target/AcctProduct-1.RELEASE.jar</argument>
+            		<argument>/AcctProduct-1.RELEASE.jar</argument>
             		<mainClass>com.hcl.hackaton.Application</mainClass>
 			</arguments>
     		</configuration>
